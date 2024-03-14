@@ -6,7 +6,7 @@ import { sendEmail } from "@/helper/mailer";
 
 connect();
 
-export async function POST(request: NextRequest) {
+export default async function POST(request: NextRequest) {
     try {
         const resBody = await request.json()
         const { username, email, password } = resBody
